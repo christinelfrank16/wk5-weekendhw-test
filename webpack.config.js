@@ -38,6 +38,17 @@ module.exports = {
           /spec/
         ],
         loader: "eslint-loader"  // MUST be Last in array of rules
+      },
+      {
+        test: /\.js$/,
+        exclude: [
+          /node_modules/,
+          /spec/
+        ],
+        loader: "babel-loader",
+        options: {
+          presets: ['es2015']
+        }
       }
     ]
   }
